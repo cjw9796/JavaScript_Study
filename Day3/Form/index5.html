@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>카테고리 선택</title>
+</head>
+<script>
+    window.onload = function() {
+        // 전체 선택 체크박스 이벤트 처리
+        document.getElementById('select-all').addEventListener('click', function() {
+            var checkboxes = document.querySelectorAll('.category');
+            for(var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = this.checked;
+            }
+        });
+
+        // 카테고리 체크박스 이벤트 처리
+        var checkboxes = document.querySelectorAll('.category');
+        for(var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].addEventListener('click', function() {
+                var allChecked = true;
+                for(var j = 0; j < checkboxes.length; j++) {
+                    if(!checkboxes[j].checked) {
+                        allChecked = false;
+                        break;
+                    }
+                }
+                document.getElementById('select-all').checked = allChecked;
+            });
+        }
+
+        // 카테고리 선택 버튼 이벤트 처리
+        document.getElementById('select-category').addEventListener('click', function(event) {
+            event.preventDefault(); // 폼 제출 막기
+            var selectedCategories = [];
+            var checkboxes = document.querySelectorAll('.category:checked');
+            for(var i = 0; i < checkboxes.length; i++) {
+                selectedCategories.push(checkboxes[i].value);
+            }
+            document.getElementById('selected-categories').textContent = selectedCategories.join(', ');
+        });
+    };
+</script>
+<body>
+
+    <form name = "testForm">
+		<fieldset>
+			<h1>카테고리 선택</h1>
+			<input type="checkbox" id="select-all"> 전체 선택<br>
+			<input type="checkbox" class="category" value="종합"> 종합<br>
+			<input type="checkbox" class="category" value="소설"> 소설<br>
+			<input type="checkbox" class="category" value="시"> 시<br>
+			<input type="checkbox" class="category" value="경제"> 경제<br>
+			<input type="checkbox" class="category" value="자기계발"> 자기계발<br>
+			<input type="checkbox" class="category" value="아동"> 아동<br>
+			<input type="checkbox" class="category" value="여행"> 여행<br>
+			<input type="checkbox" class="category" value="과학"> 과학<br>
+			<input type="checkbox" class="category" value="역사"> 역사<br>
+			<input type="checkbox" class="category" value="외국어"> 외국어<br>
+			<input type="checkbox" class="category" value="컴퓨터"> 컴퓨터<br>
+			<input type="checkbox" class="category" value="만화"> 만화<br>
+			<button id="select-category">카테고리 선택</button>
+			<br>
+			<br>
+		</fieldset>
+		<fieldset>
+			<div>
+
+				선택한 카테고리: <span id="selected-categories"></span>
+			</div>
+		</fieldset>
+		
+	
+	
+     </form>
+</body>
+</html>
+
+
+        <!--
+              <div class="bg-light" id="order-list">
+            >> []이 선택되었습니다.
+        </div>
+        -->
+
+
+
+        <!--
+             복사 단축키 shift + alt + 아래키   
+             
+
+        -->

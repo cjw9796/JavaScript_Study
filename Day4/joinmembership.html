@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<style>
+    header {
+        background-color: #82828248;
+        margin: 1px;
+        text-align: center;
+    }
+
+    header img {
+        width: 100%;
+        height: 300px;
+    }
+
+    nav {
+        border: 4px solid violet;
+        width: 15%;
+        float: left;
+        margin-left: 10px;
+        padding: 0px 10px;
+    }
+
+    nav a {
+        display: block;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        padding: 1px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    legend {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    form {
+        width: 520px;
+        height: auto;
+        padding-left: 10px;
+        margin: 50px auto;
+    }
+
+    fieldset {
+        border: 1px solid #c0c0c0;
+        padding: 30px 20px 30px 30px;
+        margin-bottom: 35px;
+    }
+
+    .joinbtn {
+        /*가입하기버튼*/
+        width: 100%;
+        padding: 20px;
+        border: 1px solid #aaa;
+        border-radius: 20px;
+        background: linear-gradient(to left, purple, violet);
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    .menubutton {
+        background: linear-gradient(to left, purple, violet);
+        border-radius: 10px;
+        color: white;
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 5px;
+    }
+
+    li {
+        margin: 10px;
+        /*text-align: right;*/
+    }
+
+    .login {
+        display: inline-block;
+        width: 80px;
+        margin-right: 10px;
+        text-align: right;
+    }
+
+    .loginbox {
+        width: 300px;
+    }
+</style>
+<script>
+      function submitForm() {
+        // 회원가입 양식의 input 요소들을 가져옵니다.
+        const loginname = document.getElementById('loginname');
+        const loginID = document.getElementById('loginID');
+        const loginPW = document.getElementById('loginPW');
+        const loginphonenumber = document.getElementById('loginphonenumber');
+
+        // input 요소들의 값이 유효한지 확인합니다.
+        if (loginname.value.trim() === '') {
+            alert('이름을 입력해주세요.');
+            loginname.focus();
+            return false;
+        }
+
+        if (loginID.value.trim() === '') {
+            alert('아이디를 입력해주세요.');
+            loginID.focus();
+            return false;
+        }
+
+        if (loginPW.value.trim() === '') {
+            alert('비밀번호를 입력해주세요.');
+            loginPW.focus();
+            return false;
+        }
+
+        if (loginphonenumber.value.trim() === '') {
+            alert('전화번호를 입력해주세요.');
+            loginphonenumber.focus();
+            return false;
+        }
+
+        // 회원가입 양식을 서버로 전송합니다.
+        alert('회원가입이 완료되었습니다.');
+        return true;
+    }
+  </script>
+  
+<body>
+    <header> <img src="덕성여대_.jpg" alt=""> </header>
+    <main></main>
+
+
+    <h2>회원정보</h2>
+    <nav>
+        <div>
+            <p> <button class="menubutton"><a href="mainlogin.html"> 로그인</a> </button> </p>
+        </div>
+        <div>
+            <p> <button class="menubutton"> <a href="joinmembership.html">회원가입</a> </button> </p>
+        </div>
+        <div>
+            <p> <button class="menubutton"> <a href="findIDPW.html">ID/PW찾기</a> </button></p>
+        </div>
+    </nav>
+
+    <article>
+        <section>
+
+ <form name="joinmembership" onsubmit="return submitForm()" >
+                <h2>회원가입</h2>
+                <fieldset>
+                    <legend>회원가입</legend>
+                    <ul>
+                        <li>
+                            <label class="login" for="name">이름:</label>
+                            <input type="text" class="loginbox" id="loginname" name="loginname">
+                        </li>
+                        <li>
+                            <label class="login" for="id"> 아이디:</label>
+                            <input type="text" class="loginbox" id="loginID" name="loginID">
+                        </li>
+                        <li>
+                            <label class="login" for="pw">비밀번호:</label>
+                            <input type="password" class="loginbox" id="loginPW" name="loginPW">
+                        </li>
+                        <li>
+                            <label class="login" for="phonenumber">전화번호</label>
+                            <input type="tel" class="loginbox" id="loginphonenumber" name="loginphonenumber">
+                        </li>
+                    </ul>
+
+                </fieldset>
+                <button type="submit" class="joinbtn">가입하기</button>
+
+            </form>
+
+
+
+        </section>
+
+
+
+
+    </article>
+
+
+</body>
+
+</html>

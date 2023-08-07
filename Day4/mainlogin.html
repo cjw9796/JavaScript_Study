@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인(메인)</title>
+</head>
+<style>
+    header {
+        background-color: white;
+        margin: 1px;
+        text-align: center;
+    }
+
+    header img {
+        width: 100%;
+        height: 300px;
+    }
+
+    nav {
+        border: 4px solid violet;
+        width: 15%;
+        float: left;
+        margin-left: 10px;
+        padding: 0px 10px;
+    }
+
+    nav a {
+        display: block;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        padding: 1px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    legend {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    form {
+        width: 520px;
+        height: auto;
+        padding-left: 10px;
+        margin: 50px auto;
+    }
+
+    fieldset {
+        border: 1px solid #c0c0c0;
+        padding: 30px 20px 30px 30px;
+        margin-bottom: 35px;
+    }
+
+    .loginbtn {
+        /*로그인버튼*/
+        width: 100%;
+        padding: 20px;
+        border: 1px solid #aaa;
+        border-radius: 20px;
+        background: linear-gradient(to left, purple, violet);
+        color: rgb(255, 255, 255);
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    .menubutton {
+        background: linear-gradient(to left, purple, violet);
+        border-radius: 10px;
+        color: white;
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 5px;
+    }
+
+    li {
+        margin: 10px;
+    }
+
+    .login {
+        display: inline-block;
+        width: 80px;
+        margin-right: 10px;
+        text-align: right;
+    }
+
+    .loginbox {
+        width: 300px;
+    }
+</style>
+
+<script>
+ const loginBtn = document.getElementById('login-btn');
+    loginBtn.addEventListener('click', () => {
+      window.location.href = 'Academic_management.html';
+    });
+
+    function submitForm() {
+      const loginID = document.getElementById('loginID').value;
+      const loginPW = document.getElementById('loginPW').value;
+
+      // 서버에서 아이디와 비밀번호를 확인하는 로직
+      if (loginID === '사용자 입력한 아이디' && loginPW === '사용자 입력한 비밀번호') {
+        return true; // 로그인 성공
+      } else {
+        alert('로그인 정보가 올바르지 않습니다.');
+        return false; // 로그인 실패
+      }
+    }
+</script>
+
+<body>
+    <header> <img src="덕성여대_.jpg" alt=""> </header>
+    <main></main>
+
+    <h2>회원정보</h2>
+    <nav>
+        <div>
+            <p> <button class="menubutton"><a href="mainlogin.html"> 로그인</a> </button> </p>
+        </div>
+        <div>
+            <p> <button class="menubutton"> <a href="joinmembership.html">회원가입</a> </button> </p>
+        </div>
+        <div>
+            <p> <button class="menubutton"> <a href="findIDPW.html">ID/PW찾기</a> </button></p>
+        </div>
+    </nav>
+
+    <article>
+        <section>
+
+            <form name="login">
+                <h2>회원로그인</h2>
+                <fieldset>
+                    <legend>회원로그인</legend>
+
+
+                    <ul>
+                        <li>
+                            <label class="login" for="id"> 아이디:</label>
+                            <input type="text" class="loginbox" id="loginID" name="loginID">
+                        </li>
+                        <li>
+                            <label class="login" for="pw">비밀번호:</label>
+                            <input type="password" class="loginbox" id="loginPW" name="loginPW">
+                        </li>
+                    </ul>
+
+                </fieldset>
+                <button type="submit" class="loginbtn"> 로그인</button>
+                
+            </form>
+            
+        </section>
+
+
+
+
+    </article>
+
+
+</body>
+
+</html>
+
+<!--
+    <button type="submit" class="loginbtn"> <a href="Academic_management.html">로그인 </a> </button>-->
+
+
+
+<!--
+시맨틱 태그: 사람이 이해하기 쉽도록 html문서 구조를 쉽게 파악 태그
+<header> 사이트의 머리부분에 사용</header>
+<main> 메인 콘텐츠를 나타내는데 사용</main>
+<section>제목별로 나눌 수 있는 문서의 콘텐츠 영역을 구성하는 요소 </section>
+<article> 개별 콘텐츠를 나타내는 요소 </article>
+<aside>좌우측의 사이드 영역 </aside>
+<footer> 사이트의 바닥부분, 주로 연락처나 제작자 정보등을 기술하는 부분 </footer>
+<hgroup> 제목과 부제목을 묶어서 나타내는 요소 </hgroup>
+<nav> 웹 페이지 메뉴를 만들 때 사용 </nav>
+-->
+
+<!--
+   1. input박스 나란히 
+   2. 헤드 이미지 풀로 
+   3. 버튼 색 파란색 ㄴㄴ 
+
+-->

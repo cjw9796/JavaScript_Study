@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문하기</title>
+</head>
+<style>
+    .container1 {
+        background-position: center;
+        border-style: solid;
+        border-width: 1px;
+
+        text-align: center;
+        width: 400px;
+        height: auto;
+        margin: auto;
+        padding: 10px;
+        vertical-align: 5px;
+    }
+
+    .container2 {
+        border-style: solid;
+        border-width: 1px;
+        text-align: center;
+        width: 400px;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .container3 {
+        text-align: center;
+        margin: 10px;
+        padding: 10px 30px;
+
+
+    }
+</style>
+
+<body>
+    <article>
+
+        <section class="container1">
+            <form action="">
+
+                <div class="상품정보">
+                    <p>상품: <input type="text"> </p>
+                    <p>갯수: <input type="text"></p>
+                </div>
+            </form>
+        </section>
+        <br>
+        <section class="container2">
+            <form>
+                <div class="주문정보">
+                    <p>이름: <input type="text"></p>
+                    <p>연락처:
+                        <input type="tel" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="###-####-####">
+                    </p>
+                    <p> 주소:<input type="text"> </p>
+
+                </div>
+            </form>
+
+
+        </section>
+        <section class="container3">
+            <form>
+
+                <button style="padding: 10px 180px 10px 185px">
+                    주문하기
+                </button>
+            </form>
+
+        </section>
+    </article>
+
+
+</body>
+
+</html>

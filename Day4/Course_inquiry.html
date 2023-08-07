@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수강과목 조회</title>
+</head>
+<style>
+    header {
+        background-color: #82828248;
+        margin: 1px;
+        text-align: center;
+    }
+    header img {
+        width: 100%;
+        height: 300px;
+    }
+
+    nav {
+        border: 4px solid violet;
+        width: 15%;
+        float: left;
+        margin-left: 10px;
+        padding: 0px 10px;
+    }
+
+    nav a {
+        display: block;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        padding: 1px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    legend {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    form {
+        width: 520px;
+        height: auto;
+        padding-left: 10px;
+        margin: 50px auto;
+    }
+
+    fieldset {
+        border: 1px solid #c0c0c0;
+        padding: 30px 20px 30px 30px;
+        margin-bottom: 35px;
+    }
+
+    .order {
+        width: 100%;
+        padding: 20px;
+        border: 1px solid #aaa;
+        background: #e9e9e9;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    .menubutton {
+        background: linear-gradient(to left, purple, violet);
+        border-radius: 10px;
+        color: white;
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 5px;
+    }
+
+    table {
+        border: 1px solid;
+        width: 500px;
+    }
+
+    th,
+    td {
+        border: 1px solid;
+    }
+
+    th {
+        background-color: rgb(112, 109, 109);
+        color: white;
+    }
+</style>
+
+<body>
+
+    <header> <img src="덕성여대_.jpg" alt=""> </header>
+    <main></main>
+
+    <h2>학사관리</h2>
+    <nav>
+        <div>
+            <p> <button class="menubutton"><a href="Course_inquiry.html"> 수강과목 조회</a> </button> </p>
+        </div>
+        <div>
+            <p> <button class="menubutton"> <a href="registration_subject.html"> 수강신청/철회</a> </button> </p>
+        </div>
+        <div>
+            <p> <button class="menubutton"> <a href="mainlogin.html"> 메인화면으로 </a></button></p>
+        </div>
+    </nav>
+
+    <article>
+        <section>
+
+            <form name="Course_inquiry">
+                <h2>수강과목조회페이지다</h2> <br>
+                <fieldset>
+                    <legend>수강과목조회</legend>
+
+                    <table> <!--임시테이블 생성-->
+                        <tr>
+                            <th>No</th>
+                            <th>과목명</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>경영학</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>컴퓨터공학</td>
+                        </tr>
+
+
+
+                    </table>
+
+
+                </fieldset>
+
+
+            </form>
+
+        </section>
+
+
+
+
+    </article>
+
+
+
+</body>
+
+</html>

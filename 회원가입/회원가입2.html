@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    
+function validateForm() {
+  // 필수 입력 필드 확인
+  let id = document.getElementById("id");
+  let password = document.getElementById("password");
+  let name = document.getElementById("name");
+  let email = document.getElementById("email");
+
+  if (id.value == "") {
+    alert("아이디를 입력하세요.");
+    return false;
+  }
+
+  if (password.value == "") {
+    alert("비밀번호를 입력하세요.");
+    return false;
+  }
+
+  if (name.value == "") {
+    alert("이름을 입력하세요.");
+    return false;
+  }
+
+  if (email.value == "") {
+    alert("이메일을 입력하세요.");
+    return false;
+  }
+
+  // 이메일 형식 확인
+  var re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!re.test(email.value)) {
+    alert("이메일 형식이 올바르지 않습니다.");
+    return false;
+  }
+
+  return true;
+}
+</script>
+<body>
+    <form onsubmit="return validateForm()">
+        <input type="text" id="id" placeholder="아이디">
+        <input type="password" id="password" placeholder="비밀번호">
+        <input type="text" id="name" placeholder="이름">
+        <input type="email" id="email" placeholder="이메일">
+        <input type="submit" value="회원가입">
+      </form>
+</body>
+</html>
